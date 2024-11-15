@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #9ac4f8;
+    --color-highlight: #e36588;
+    --color-buttons: #6247aa;
+    --color-background: #102b3f;
+    --color-idk-what-to-call-it: #062726;
+    --main-text: #ffffff;
+
+    --grid-size-systems: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-text);
+}
+
+/* --- Systems --- */
+.grid {
+    height: 100%;
+    background-size: var(--grid-size-systems) var(--grid-size-systems);
+    background-image:
+        linear-gradient(to right, var(--color-background) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-background) 1px, transparent 1px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.grid .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .wrapper > div {
+    position: absolute;
+    height: 5%;
+    width: 10%;
+    text-wrap: nowrap;
+}
+
+.starImage {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.grid p {
+    display: inline;
+    margin: 0px;
+    color: limegreen;
+}
+
+p.systemInfo {
+    display: none;
+}
+
+/* make stuff viewable when hover (helps when stars overlap or background is light) */
+.wrapper > div:hover > .systemInfo {
+    display: block;
+}
+
+.wrapper > div:hover {
+    z-index: 1;
+}
+
+.wrapper > div:hover p {
+    background-color: var(--color-background);
+}
+
+.moveLeft {
+    position: relative;
+    right: 65%;
+    text-align: right;
+}
+
+.moveUp {
+    position: relative;
+    bottom: 300%;
+}
+
+/* all images are linked to the right star type from fetch */
+.RED_STAR {
+    background-image: url(../images/redStar.png);
+}
+.ORANGE_STAR {
+    background-image: url(../images/orangeStar.png); 
+}
+.BLUE_STAR {
+    background-image: url(../images/blueStar.png);
+}
+.YOUNG_STAR {
+    background-image: url(../images/newStar.png);
+}
+.WHITE_DWARF {
+    background-image: url(../images/whiteDwarfStar.png);
+}
+.HYPERGIANT {
+    background-image: url(../images/hyperGiantStar.png);
+    height: 150%;
+    width: 150%;
+    /* big star is now bigger than rest */
+}
+.UNSTABLE {
+    background-image: url(../images/unstableStar.png);   
+}
+.NEUTRON_STAR {
+    background-image: url(../images/neutronStar.png);
+} 
+.BLACK_HOLE {
+    background-image: url(../images/blackHole.png);
+}
+.NEBULA {
+    background-image: url(../images/nebula.png);
+} 
+
+.BG {
+    background-image: url("/images/SpaceBg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}  
+
+/* --- Header --- */
+
+header {
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(35, 35, 211); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0px 0px 19px var(--color-highlight);
+}
+
+header > div {
+    padding: 0px 20px;
+    color: var(--color-highlight);
+    position: relative;
+    z-index: 50;
+}
+
+header > div svg {
+    fill: var(--gts-blue);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+header>div:nth-of-type(2) {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    letter-spacing: -10px;
+}
+
+.titleHeader {
+    font-size: 2em;
+}
+
+.spinContainer {
+    padding: 0px;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.spinner {
+    background: linear-gradient(135deg, var(--color-highlight) 25%, var(--color-primary) 50%, rgba(0, 0, 0, 0) 69%);
+    width: 110vw;
+    height: 110vw;
+    position: absolute;
+    transform: scaleX(var(--gradient-scale));
+
+    animation-name: spin;
+    animation-duration: 3300ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(-210deg) scaleX(1); 
+    } to { 
+        transform: rotate(0deg) scaleX(var(--gradient-scale)); 
+    }
+}
+
+/* --- Agent Info --- */
+
+/*Agent information bar css*/
+
+.agentInfo{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-highlight);  
+    background: linear-gradient(to bottom, var(--color-primary), rgba(0,0,0,0));
+    border: #9ac4f8;
+    border-width: 1px;
+    border-style: solid;
+    
+}
+
+.agentInfo h1{
+    color: var(--main-text);
+    text-shadow: 0px 0px 16px var(--color-highlight);
+}
+
+.agentInfo ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    color:var(--main-text);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--color-highlight);
+}
+
+/*Contract Menu CSS*/
+
+.contractMenu{
+    color: var(--main-text);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contract{
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--color-highlight);
+    padding: 25px;
+    border-radius: 10px;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(227, 101, 136,0.25), rgba(0,0,0,0));
+}
+
+.contract button{
+    background: linear-gradient(to bottom, var(--color-buttons), rgba(0,0,0,0));
+    border-color: var(--color-buttons);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    color: var(--main-text);
+    font-size: 20px;
+}
+
+.contract button:active{
+    background: linear-gradient(to bottom,  rgba(0,0,0,0), var(--color-buttons));
+}
+
+#userIcon {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+}
+
+#userIcon svg {
+    fill: #ffffff;
+    filter: drop-shadow(0 0 10px var(--color-highlight));
+}
+
+/* --- Game Tabs -- */
+
+.game-tabs{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-primary);
+    background-image: linear-gradient(var(--color-primary), rgba(0, 0, 0, 0));
+}
+
+.tabs-list{
+    display:flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+
+.tab {
+    width: 100%;
+}
+
+.tab > button {
+    padding: 25px 0;
+    width: 100%;
+    border: none;
+    background-image: linear-gradient(var(--color-background), var(--color-idk-what-to-call-it));
+    background-color: transparent;
+
+    color: #FFF;
+    text-shadow: 0 0 3px var(--color-highlight);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+
+.tabs-list > li > button:hover {
+    background-color: transparent;
+    background-image: none;
+}
+
+.tab-select > button {
+    background-color: transparent;
+    background-image: none;
+}
+
+.tabs-display {
+    background-color: transparent;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    color: #FFF;
+    text-shadow: 0 0 3px var(--color-highlight);
+    font-family: "Montserrat", sans-serif;
+    height: 50vh;
+}
+
+.tabs-container {
+    padding: 70px 350px;
+}
+
+/* --- Footer --- */
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to top, var(--color-primary), rgba(0,0,0,0));
+    border:  1px solid var(--color-primary);
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-section,
+.footer-section a {
+    color: #FFF;
+    text-shadow: 0 0 3px var(--color-highlight);
+}
+
+.footer-section p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-info > .footer-section:not(:nth-of-type(1)) { border-left: var(--color-primary) solid 1px; }
+
+.BG{
+    background-image: url("/images/SpaceBg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+} 
+
+.agentInfo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-highlight);  
+    background: linear-gradient(to bottom, var(--color-primary), rgba(0,0,0,0));
+    border: #9ac4f8;
+    border-width: 1px;
+    border-style: solid;
+    font-family: "Montserrat", sans-serif;
+}
+
+.agentInfo h1{
+    color: #ffffff;
+    text-shadow: 0px 0px 16px var(--color-highlight);
+}
+
+.agentInfo ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+
+
+/* Authentication Centre | John */
+.auth-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(6, 39, 38, 0.8);
+}
+
+.auth-container {
+    padding: 50px;
+    border: solid 1px var(--color-primary);
+    border-radius: 4px;
+    background: linear-gradient(to bottom, var(--color-primary), rgba(0, 0, 0, 0));
+}
+
+.auth-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-change button {
+    background: none;
+    border: none;
+    margin-top: 20px;
+    font: 400 16px 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 4px var(--color-highlight);
+    cursor: pointer;
+}
+
+.login,
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login *,
+.register * {
+    font-family: "Montserrat", sans-serif;
+}
+
+.login h1,
+.register h1 {
+    font-weight: 500;
+    font-size: 4em;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0px 0px 16px var(--color-highlight);
+    margin: 0;
+}
+
+#login-form,
+#register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+#login-form input,
+#register-form input {
+    width: 30vh;
+    background: var(--color-background);
+    color: var(--color-highlight);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+#login-form input::placeholder,
+#register-form input::placeholder {
+    color: var(--color-highlight);
+}
+
+#login-form button,
+#register-form button {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(180deg, var(--color-background), var(--color-idk-what-to-call-it));
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* --- User menu --- */
+button.closeMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 60;
+    opacity: 0;
+    border: none;
+}
+
+.user {
+    position: fixed;
+    left: 80px;
+    top: 140px;
+    width: 120px;
+    height: 80px;
+    z-index: 69;
+    border: solid var(--color-primary) 1px;
+    background: linear-gradient(to bottom, var(--color-buttons), var(--color-background));
+    box-shadow: 0 0 15px black;
+    overflow: hidden;
+    animation-duration: 0.3s;
+    animation-name: userMenuOpen;
+    animation-timing-function: ease;
+}
+
+@keyframes userMenuOpen {
+    from {
+        animation-timing-function: ease;
+        width: 0px;
+        height: 0px;
+    }
+    40% {
+        animation-timing-function: ease;
+        width: 120px;
+        height: 3px;
+    }
+    to {
+        animation-timing-function: ease;
+        width: 120px;
+        height: 80px;
+    }
+}
+
+.user p,
+.user a {
+    color: white;
+    position: relative;
+    margin: 0; 
+    z-index: 999;
+    text-decoration: underline transparent;
+    text-underline-offset: -2px;
+    transition: text-decoration 300ms, text-underline-offset 500ms, color 200ms;
+}
+
+.user a:hover {
+    text-decoration: underline white;
+    text-underline-offset: 5px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.user-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#copyMessage p {
+    margin: 0;
+    text-shadow: 0 0 5px black;
+}
+
+#copyMessage {
+    display: none;
+    position: fixed;
+    top: 140px;
+    left: 220px;
+    z-index: 3000000;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 6px 12px;
+    color: white;
+    border-radius: 15px;
+}
+
+#copyMessage.shown {
+    display: block;
+    opacity: 0;
+    animation: showCopyMessage 2s;
+}
+
+@keyframes showCopyMessage {
+    from {
+        top: 160px;
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        top: 140px;
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+    90% {
+        top: 140px;
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+    to {
+        top: 120px;
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+}

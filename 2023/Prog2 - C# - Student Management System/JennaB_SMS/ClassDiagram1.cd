@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JennaB_SMS.Course">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAABAAAAAAAgAAAAIAAgAAQQMAAEAAAAAAAAAIAAAQA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.CourseAssessmentMark">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAAgAAAAAAgAAACIAAACAAQAAAAQAAAAEAAAAgAAA=</HashCode>
+      <FileName>CourseAssessmentMark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Department">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAQAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Institution">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgAAAAAAAAAAAAAQAAAIEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Institution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Learner">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Learner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Lecturer">
+    <Position X="13" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAggAAgAIAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lecturer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Person">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAgg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Program">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAACACAAAggAAAAAAAgKABAAAAQACFGAAiBKAAEAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_SMS.Utils">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAABCAAAAAAAAAAAgAACAEAQAEAAAAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="JennaB_SMS.Position">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAgACAACAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JennaB_SMS.Salary">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAASAAAAAAAAABAAAAAAAAAIAACAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,104 @@
+// chapter 12, 13 and 14 questions
+
+Q.
+Name 3 types of attack that TCP/IP is vulnerable to.
+A.
+Spoofing, DoS, Man-in-the-Middle.
+
+Q.
+What is malware?
+A.
+Malicious software designed to harm or exploit.
+
+Q.
+What is phishing?
+A.
+Deceptive attempts to steal sensitive information.
+
+Q.
+What is spam?
+A.
+Unwanted and unsolicited bulk messages.
+
+Q.
+What is a Zero-Day attack? 
+A.
+Exploiting unknown software vulnerabilities.
+
+Q.
+How can computer users protect themselves from malicious software? 
+A.
+Antivirus, updates, safe browsing habits.
+
+Q.
+What are some common techniques for protecting physical equipment?
+A.
+Locks, surveillance, access control.
+
+Q.
+How can you protect data on computers?
+A.
+Encryption, strong passwords, backups.
+
+Q.
+What settings can you configure using Windows Local Security Policy to make your computers more secure?
+A.
+User controls, password policies, logging.
+
+Q.
+What are two examples of displaying professional communication skills while talking to a customer?
+A.
+Active listening, clear explanations.
+
+Q.
+What is the difference between personal software licences and commercial software licences?
+A.
+Personal for individual use, commercial for business use.
+
+Q.
+During the process of troubleshooting, a technician gains access to customer private information. What is expected that the technician do with this information?
+A.
+Handle it with confidentiality and privacy.
+
+Q.
+What actions should a technician take if illegal content is discovered on the hard drive of a customer's computer?
+A.
+Follow legal procedures, report to authorities.
+
+Q.
+When performing computer forensics, what can be prevented with a properly and carefully documented chain of custody?
+A.
+Tampering or mishandling of evidence.
+
+Q.
+A technician is analyzing a computer that may have been used for illegal activity. What are two examples of volatile data?
+A.
+RAM contents, network connections.
+
+Q.
+What are three pieces of information a level one technician should gather from a customer?
+A.
+Name, contact details, issue description.
+
+Q.
+What is an SLA and what is an example of its typical contents?
+A.
+Service Level Agreement defines service expectations, e.g., response time, support scope.
+
+Q.
+Which two location data sources can locator apps use to determine the position of a mobile device?
+A.
+GPS, Wi-Fi, or cellular network.
+
+Q.
+What do the terms "jailbreaking" and "rooting" mean?
+A.
+Gaining unauthorized access to device systems.
+
+Q.
+What do the following file permissions tell us about the security of the file?
+rw-r-x-x
+A.
+Owner has read and write permissions, others have read and execute permissions.
+
+// end of questions

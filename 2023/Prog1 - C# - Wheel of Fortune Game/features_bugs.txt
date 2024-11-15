@@ -1,0 +1,32 @@
+Features:
+
+	(General)
+- Colours to emphasise things, like titles or important things are all blue,
+	positive outcomes are green, negative outcomes are red.
+- There is no way to make the program "die" from giving an invalid input
+- No inputs care if the letters are lower or upper case
+
+	(In changeData method)
+- Ability to not "die" when searching for multiple that contain the same thing, 
+	eg 2x people called "Matthew"
+- Ability to have a search for any part of a contestants first name, 
+	can just enter 'a' and it will show 28 people that have at least 1 
+	'a' in their first names
+- Ability to choose between multiple people at once, just enter the number beside their name
+- Ability to cancel the search in case you typed it wrong, using escape number "999"
+
+	(In Final10 method)
+- Finalists do not change if you go into the method again and again
+- Finalists only change when the program is launched
+
+	(In WhoPlayer method)
+- Player is always one of the finalists
+- Player does not change if you go into the method again and again
+- Player changes after each game played, and when the program is launched
+
+	(In Game and WheelSpin methods)
+- Large ascii words for intro into game, and for winning the game
+- funny wheel spinning sounds
+- showing all letters of the alphabet unless they have been already guessed, then they become blank
+- telling the user they cannot guess something they have done already, and giving them another go
+- Give up option for people who cannot guess the word or they don't want a negative score

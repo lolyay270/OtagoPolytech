@@ -1,0 +1,81 @@
+// chapter 5 and 6 questions
+
+Q.
+What are the 7 layers of the OSI model of networking?
+A.
+- Physical
+- Data Link
+- Network
+- Transport
+- Session
+- Presentation
+- Application
+
+Q.
+Which network service automatically assigns IP addresses to devices on the network?
+A.
+- DHCP (Dynamic Host Configuration Protocol)
+
+Q.
+What do the following stand for?
+- PAN: 
+- WLAN: 
+- MAN: 
+- LAN: 
+A.
+- PAN (Personal Area Network) is a network for interconnecting devices centered around an individual person's workspace.
+- WLAN (Wireless Local Area Network) is a network that allows devices to connect and communicate wirelessly, typically in a localized environment like a home or office.
+- MAN (Metropolitan Area Network) is a network that interconnects users with computer resources in a geographic area or region larger than that covered by even a large Local Area Network (LAN) but smaller than the region covered by a Wide Area Network (WAN).
+- LAN (Local Area Network) is a group of computers and associated devices that share a common communications line or wireless link to a server within a distinct geographic area.
+
+Q.
+Describe what a MAC address is and how it is used.
+A.
+- A MAC address is a unique identifier assigned to a network interface card (NIC). It is used for device identification at the data link layer.
+
+Q.
+Which type of server would support the SMTP, POP, and IMAP protocols?
+A.
+- Email server
+
+Q.
+Which three devices are usually integrated into a multipurpose network device? (the device we use at home for our network)
+A.
+- Router, switch, and access point
+
+Q.
+A new computer workstation has been installed in a small office. The user of the workstation can print a document using a network printer on the LAN, but cannot access the Internet. What is a possible cause of the problem?
+A.
+- Misconfigured network gateway settings
+
+Q.
+What is the problem if a computer automatically configures an IP address in the 169.254.x.x address range?
+A.
+- Failure to obtain an IP address from a DHCP server
+
+Q.
+What does the command PING do?
+A.
+- Sends a network request to check connectivity and measure round-trip time
+
+Q.
+A user can print to a printer that is on the same network, but the traffic of the user cannot reach the Internet. What is a possible cause of the problem?
+A.
+- Incorrect or misconfigured DNS settings
+
+Q.
+What is the correct compressed format of the IPv6 address 2001:0db8:eeff:000a:0000:0000:0000:0001?
+A.
+- 2001:db8:eeff:a::1
+
+Q.
+What is the purpose of a DNS server?
+A.
+- Translates domain names into IP addresses
+
+Q.
+After having talked to the customer, a network technician suspects that an invalid IP address is the most likely cause of a network issue. Which step of the troubleshooting process does this represent?
+A.
+- Identifying the problem
+
+// end of questions

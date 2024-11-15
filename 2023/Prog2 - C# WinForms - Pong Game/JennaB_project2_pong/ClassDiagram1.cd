@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JennaB_project2_pong.Score">
+    <Position X="11" Y="1" Width="1.5" />
+    <InheritanceLine Type="JennaB_project2_pong.GameObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.045" />
+        <Point X="6.5" Y="6.973" />
+        <Point X="11.812" Y="6.973" />
+        <Point X="11.812" Y="6.598" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>MAYgAAAAAEAABgKAAAAABAAAAAAAgAABAIAAAAAUgIg=</HashCode>
+      <FileName>Score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.PongGame">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAQBEAAACEAAACAAAQIAgAAAAAAAAAAAE=</HashCode>
+      <FileName>PongGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.Paddle">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <InheritanceLine Type="JennaB_project2_pong.GameObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.045" />
+        <Point X="6.5" Y="5.434" />
+        <Point X="8.25" Y="5.434" />
+        <Point X="8.25" Y="5.059" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAhgAgAIAAIAAAAAAAAAAAACAAAAgiAAA=</HashCode>
+      <FileName>Paddle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.GameObject">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAgAABgIAAAAAAAAACAgAAAgAAAAAABAAAAg=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.Controller">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAgAAAAABAAAAAAIAAAAAAAAAAAACAQAAAAgAAI=</HashCode>
+      <FileName>Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JennaB_project2_pong.Ball">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <InheritanceLine Type="JennaB_project2_pong.GameObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.045" />
+        <Point X="6.5" Y="6.011" />
+        <Point X="10" Y="6.011" />
+        <Point X="10" Y="5.636" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAQAAIAAhgAgAAAIIAABAAkAAQAAAAAAAAIAAgA=</HashCode>
+      <FileName>Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
