@@ -1,0 +1,88 @@
+Coding Standards:
+
+File and Folder Structure:
+
+Organize your project with a clear directory structure.
+Separate components into their own folders.
+Use lowercase for folder and file names (e.g., mycomponent.svelte).
+Component Naming:
+
+Use PascalCase for component names (e.g., MyComponent.svelte).
+Make component names descriptive and indicative of their purpose.
+Indentation and Formatting:
+
+Use consistent indentation (e.g., 2 or 4 spaces).
+Configure your code editor to automatically format Svelte files.
+Use single quotes for attribute values (e.g., attr='value').
+Whitespace:
+
+Use spaces instead of tabs for indentation.
+Maintain consistent spacing around operators and braces.
+Avoid trailing white spaces and empty lines at the end of files.
+Comments:
+
+Include comments to explain complex logic or unusual code.
+Use clear and concise comments to describe the purpose of your components.
+JavaScript:
+
+Use JavaScript code sparingly within Svelte components.
+Prefer reactive statements and Svelte's built-in features over complex JavaScript logic whenever possible.
+HTML:
+
+Follow best practices for writing HTML.
+Use semantic HTML elements when appropriate (e.g., <button> for buttons).
+Avoid inline styles and use classes for styling.
+CSS:
+
+Use scoped CSS within Svelte components by using the <style> tag.
+Keep your CSS organized and modular.
+Prefer class-based selectors over tag-based selectors.
+Event Handling:
+
+Use Svelte event handling syntax (e.g., on:click) over traditional DOM event listeners.
+Keep event handlers concise and focused.
+Props and Stores:
+
+Define props with clear and descriptive names.
+Avoid modifying props directly; treat them as read-only.
+Use Svelte stores for managing shared state when necessary.
+Conditional Rendering:
+
+Use {#if}, {#else}, and {#each} blocks for conditional rendering and list iteration.
+Avoid unnecessary nesting.
+Component Lifecycle:
+
+Understand Svelte's component lifecycle and use it appropriately.
+Initialize data in the data block.
+Perform side effects in onMount and clean them up in onDestroy.
+Error Handling:
+
+Implement error handling mechanisms when dealing with external data or APIs.
+Use try-catch blocks when necessary.
+Testing:
+
+Write unit tests for your Svelte components.
+Use testing libraries like testing-library/svelte or similar.
+Documentation:
+
+Provide clear documentation for your components and their props.
+Consider using tools like JSDoc for documenting JavaScript functions.
+Version Control:
+
+Use version control (e.g., Git) and follow a branching strategy.
+Write meaningful commit messages.
+Performance:
+
+Optimize components for performance using Svelte's reactive system.
+Profile and optimize critical parts of your application.
+Accessibility (a11y):
+
+Ensure your components are accessible by following accessibility best practices.
+Use ARIA attributes and semantic HTML.
+Internationalization (i18n):
+
+Plan for internationalization and localization if your project may need it in the future.
+Dependency Management:
+
+Keep dependencies up-to-date.
+Regularly audit and remove unused dependencies.

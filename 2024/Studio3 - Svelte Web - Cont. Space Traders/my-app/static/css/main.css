@@ -1,0 +1,320 @@
+/*Backgound styles*/
+.backgroundimg {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.backgroundimg.ships {
+  background-image: url(../images/loginBackgroud1.png);
+}
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+  margin: 0;
+  color: #C5C5C5; /* Font colour */
+}
+
+div {
+  height: 100%;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Oswald', sans-serif;
+  color: #C5C5C5;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p, .structures {
+  font-family: 'Roboto', sans-serif;
+  color: #C5C5C5;
+}
+
+
+
+
+/*Login*/
+.container {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-image: url(../images/loginBackgroud1.png);
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #2C423F; /* Header colour */
+  border-radius: 20px;
+  background: rgba(76, 91, 97, 0.8); /* Content box colour with 80% opacity */
+  padding: 20px;
+}
+
+h1 {
+  color: rgb(197, 197, 197); /* Font colour */
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
+}
+
+.nameinput,
+.tokeninput {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 20px;
+}
+
+.nameinput,
+.tokeninput {
+  margin: 10px;
+  width: 80%;
+  height: 30px;
+  border: 2px solid #C5C5C5; /* Font colour */
+  text-align: center;
+}
+
+.button {
+  background-color: #949B96; /* Button colour */
+  color: black; /* Font colour */
+  border: none;
+  border-radius: 20px;
+  padding: 5px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+
+/*ShipYards */
+.shipDetails {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(76, 91, 97, 0.8);
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*Register      container, box and h1 same as Input*/
+.input {
+  margin: 5px;
+  width: 60%;
+  height: 20px;
+  border: 2px solid black;
+}
+
+.registerbtn {
+  margin: 5px;
+  width: 62%;
+  height: 25px;
+}
+
+.login {
+  color: white;
+  margin: 5px;
+  width: 40%;
+  height: 25px;
+  font-size: 20px;
+  text-align: right;
+}
+
+/* pop up css */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.content {
+  height: 300px;
+}
+
+.token-holder {
+  border: 3px solid black;
+  overflow: scroll;
+  height: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .box {
+    width: 70%;
+  }
+
+  .popup {
+    width: 70%;
+  }
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*Header*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sometype+Mono:ital,wght@1,500&display=swap');
+
+li,
+a,
+button {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #949B96;
+  list-style: none;
+}
+button {
+  border-radius: 10px;
+  color: #949B96;
+}
+
+.nameclass {
+  font-family: 'Oswald';
+  font-weight: 500;
+  font-size: 16px;
+  color: #C5C5C5;
+  text-decoration: none;
+}
+
+.credclass {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  color: #C5C5C5;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Oswald';
+  font-size: 25px;
+  color: #C5C5C5; /* Font colour */
+  text-decoration: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C423F; /* Header colour */
+  height: 10vh; /* 1/10 of screen height */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensure header stays on top */
+}
+
+.nav__links {
+  list-style: none;
+  margin-right: 20px;
+  font-family: 'Roboto';
+  color: '#C5C5C5';
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav__links li a {
+  color: #C5C5C5; /* Font colour */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: #949B96; /* Button colour */
+}
+
+header button {
+  background-color: #949B96; /* Button colour */
+  color: black; /* Font colour */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 40px;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 2.3px;
+  font-size: 20px;
+}
+
+header button:hover {
+  background-color: #829191; /* Content box colour */
+  color: #C5C5C5; /* Font colour */
+}

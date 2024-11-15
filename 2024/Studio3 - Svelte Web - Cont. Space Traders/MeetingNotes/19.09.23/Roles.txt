@@ -1,0 +1,6 @@
+Roles (Can be changed)
+
+Ben - User Interface 
+Sam - General Coding
+Joe - General Coding
+Ruel - Communications
