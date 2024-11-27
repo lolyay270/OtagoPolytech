@@ -1,0 +1,65 @@
+// @file Holds the table structures and db general info
+// @author Jenna Boyes
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Level {
+  id             String   @id @default(uuid())
+  number         Int      @unique
+  name           String   @unique
+  startFloorArea Int
+  startMoney     Int
+  startTanks     Tank[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Tank {
+  id            String   @id @default(uuid())
+  name          String
+  totalFishSize Int
+  floorArea     Int
+  rounded       Boolean
+  fish          Fish[]
+  decors        Decor[]
+  levels        Level[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Fish {
+  id             String      @id @default(uuid())
+  scientificName String
+  commonName     String?
+  maxSize        Int
+  temperature    Temperature
+  tankId         String
+  tank           Tank        @relation(fields: [tankId], references: [id], onUpdate: Cascade)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+enum Temperature {
+  COLD
+  TROPICAL
+}
+
+model Decor {
+  id          String   @id @default(uuid())
+  name        String
+  plantAmount Int
+  rockAmount  Int
+  caveAmount  Int
+  floorArea   Int
+  tankId      String
+  tank        Tank     @relation(fields: [tankId], references: [id], onUpdate: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

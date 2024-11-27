@@ -1,0 +1,40 @@
+{
+  "name": "s2-24-intro-app-dev-repo-lolyay270",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm i && npx prisma generate",
+    "dev": "nodemon app.js",
+    "prettier:format": "npx prettier --write .",
+    "prettier:check": "npx prettier --check .",
+    "prisma:migrate": "npx prisma migrate dev --name '' --create-only && npx prisma migrate dev",
+    "prisma:reset": "npx prisma migrate reset --force",
+    "prisma:studio": "npx prisma studio"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.16.2",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prettier": "3.3.3",
+    "prisma": "^4.16.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

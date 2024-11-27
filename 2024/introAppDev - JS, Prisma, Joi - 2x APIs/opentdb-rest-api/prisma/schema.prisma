@@ -1,0 +1,105 @@
+// @file Holds the table structures and db general info
+// @author Jenna Boyes
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//-------tables-------\\
+model User {
+  id               String               @id @default(uuid())
+  firstName        String
+  lastName         String
+  emailAddress     String               @unique
+  role             Role                 @default(BASIC)
+  password         String
+  loginAttempts    Int                  @default(0)
+  lastLoginAttempt DateTime?
+  answers          UserQuestionAnswer[]
+  scores           UserQuizScore[]
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+}
+
+model Category {
+  id        Int      @id
+  name      String   @unique
+  quizzes   Quiz[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Quiz {
+  id         String               @id @default(uuid())
+  name       String               @unique
+  type       Type
+  difficulty Difficulty
+  startDate  DateTime             @db.Date
+  endDate    DateTime             @db.Date
+  questions  Question[]
+  answers    UserQuestionAnswer[]
+  scores     UserQuizScore[]
+  categoryId Int
+  category   Category             @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+}
+
+model Question {
+  id               String               @id @default(uuid())
+  question         String
+  correctAnswer    String
+  incorrectAnswers String[] //array of strings
+  quizId           String
+  quiz             Quiz                 @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  answers          UserQuestionAnswer[]
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+}
+
+model UserQuestionAnswer {
+  id         String   @id @default(uuid())
+  answer     String
+  isCorrect  Boolean
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  quizId     String
+  quiz       Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model UserQuizScore {
+  id        String   @id @default(uuid())
+  score     Int
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  quizId    String
+  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+//-------enums-------\\
+enum Role {
+  BASIC
+  ADMIN
+}
+
+enum Type {
+  MULTIPLE
+  BOOLEAN
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
