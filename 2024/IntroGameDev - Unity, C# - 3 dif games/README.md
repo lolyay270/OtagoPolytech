@@ -1,4 +1,4 @@
-# Jenna Boyes - Intro to Algorithmic Problem Solving Portfolio
+# Jenna Boyes - Intro Game Dev Portfolio
 ## Resources used to complete these games
 ### Sheep Game
 - [Stackoverflow page after searching "dotween append callback"](https://stackoverflow.com/questions/73200801/dotween-how-to-call-a-function-when-tween-has-finished)
