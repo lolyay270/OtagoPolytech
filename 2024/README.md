@@ -17,4 +17,4 @@
 |Studio 4|-|Passed|
 |Intro App Dev|100%|A+|
 |Databases 2|93%|A+|
-|UX Engineering|TBC|Passed|
+|UX Engineering|84%|A|
